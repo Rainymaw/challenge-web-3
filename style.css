@@ -1,0 +1,84 @@
+/* Desktop design */
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+  height: 100vh;
+  background-color: #eff7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+.grid-container {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  width: 50%;
+  box-shadow: 0px 1px 25px 1px hsl(218, 22%, 67%);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 25px;
+}
+.join {
+  grid-area: 1/1/2/3;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.text-cyan {
+  color: hsl(179, 62%, 43%);
+}
+.text-yellow {
+  color: hsl(71, 73%, 54%);
+}
+.text-gray {
+  color: hsl(218, 22%, 67%);
+}
+.subscriptions {
+  background-color: hsl(179, 62%, 43%);
+  gap: 15px;
+}
+.text-white {
+  color: white;
+}
+.sub-pricing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sub-price {
+  font-size: 2rem;
+}
+.sub-btn {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  background-color: hsl(71, 73%, 54%);
+  color: white;
+  box-shadow: 0px 1px 15px 1px hsl(218, 22%, 67%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.why-us {
+  background-color: hsla(179, 62%, 43%, 0.699);
+  gap: 10px;
+}
+.reasons {
+  list-style: none;
+}
+
+/* Mobile design */
+@media screen and (max-width: 376px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+}
